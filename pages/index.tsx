@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Nav from "../components/nav";
 import Profile from "../components/profile";
+import { motion } from "framer-motion";
 
 const Home: NextPage = () => {
   return (
