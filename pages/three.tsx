@@ -1,51 +1,18 @@
-import React, { useRef } from 'react'
+import { MeshWobbleMaterial, OrbitControls } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import { motion } from 'framer-motion-3d'
 import Nav from '../components/nav'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { softShadows, MeshWobbleMaterial, OrbitControls } from '@react-three/drei'
-import { motion } from 'framer-motion'
-
-softShadows()
-
-const Cube = ({ position, args, color }: any) => {
-  const mesh = useRef(null)
-  useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01))
-
-  return (
-    <mesh castShadow position={position} ref={mesh}>
-      <boxBufferGeometry attach='geometry' args={args} />
-      <MeshWobbleMaterial
-        attach='material'
-        color={color}
-        speed={10}
-        factor={1}
-      />
-    </mesh>
-  )
-}
-
-const ThreePage = () => {
+const three = () => {
   return (
     <>
-      <Nav />
-      <div className='flex-1 flex h-[36rem] w-full justify-center items-center'>
-        {/* add canvas to the div */}
-        <Canvas shadows={true} camera={{
-            fov: 60,
-            position: [0, 0, 10],
-        }}>
-          {/* mesh */}
-          {/* <mesh> */}
-          {/* geometry */}
-          {/* <boxBufferGeometry attach='geometry' args={[1, 1, 1]} /> */}
-          {/* material */}
-          {/* <meshStandardMaterial attach='material' /> */}
-          {/* </mesh> */}
-          {/* ambient Light that affect every object */}
-          <ambientLight intensity={0.3} />
-          {/* pointer light  */}
-          <pointLight position={[-10, 0, 3]} intensity={0.3} />
-          <pointLight position={[0, -10, 0]} intensity={0.3} />
-
+      <div className='absolute w-full h-full top-0 left-0'>
+        <div className='absolute max-w-7xl w-full  mx-auto px-10'>
+          <Nav />
+        </div>
+        <Canvas shadows={true}>
+          {/* add light */}
+          <ambientLight intensity={0.6} />
+          {/* <directionalLight castShadow color='red' position={[0, 0, 5]} /> */}
           {/* directional light */}
           <directionalLight
             castShadow
@@ -60,12 +27,10 @@ const ThreePage = () => {
             shadow-camera-bottom={-10}
           />
 
-          <Cube position={[-3, 0, -1]} color='lightgreen' />
-          <Cube position={[0, -1, 0]} color='lightyellow' args={[2, 3, 1]} />
-          <Cube position={[3, 0, 0]} color='red' />
-
-
-            {/* add plane and shadow  */}
+          <motion.mesh whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <boxGeometry args={[1, 1, 1]} />
+            <MeshWobbleMaterial color='red' />
+          </motion.mesh>
           <group>
             <mesh
               receiveShadow
@@ -75,11 +40,16 @@ const ThreePage = () => {
               <shadowMaterial attach='material' opacity={0.5} />
             </mesh>
           </group>
-          <OrbitControls />
+          <OrbitControls
+            // minPolarAngle={Math.PI / 2}
+            // maxPolarAngle={Math.PI / 2}
+            enableZoom={false}
+            enablePan={false}
+          />
         </Canvas>
       </div>
     </>
   )
 }
 
-export default ThreePage
+export default three

@@ -7,7 +7,7 @@ const Profile = () => {
       <h3 className='font-semibold text-lg tracking-wider'>Biruk Endris</h3>
 
       <div className='py-5 text-8xl space-y-5'>
-        <h1 className=''>Full Stack Developer</h1>
+        <h1 className=''>Full Stack &</h1>
         <h1 className='px-20'>UI-UX Developer</h1>
       </div>
       {/* <h1>
@@ -29,7 +29,6 @@ const Profile = () => {
         height={200}
         className='rounded-full object-cover '
       /> */}
-      
     </div>
   )
 }
