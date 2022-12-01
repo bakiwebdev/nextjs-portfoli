@@ -18,6 +18,11 @@ const Home: NextPage = () => {
       >
         full screen
       </motion.div> */}
+      {/* <section className="bg-gray-50 flex-1">
+
+      </section> */}
+      <Profile />
+      <Profile />
       <Profile />
     </div>
   );

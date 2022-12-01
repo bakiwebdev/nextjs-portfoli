@@ -10,17 +10,17 @@ const Profile = () => {
         <h1 className=''>Full Stack &</h1>
         <h1 className='px-20'>UI-UX Developer</h1>
       </div>
-      {/* <h1>
+      <h1>
         <span className='font-semibold text-lg tracking-wider'>
-            Full Stack Developer
+          Full Stack Developer
         </span>
         <span className='text-gray-600'>
-            |
-            <span className='text-gray-600'>
-                React | Node | GraphQL | MongoDB | Next.js | TailwindCSS
-            </span>
+          |
+          <span className='text-gray-600'>
+            React | Node | GraphQL | MongoDB | Next.js | TailwindCSS
+          </span>
         </span>
-      </h1> */}
+      </h1>
       {/* profile picture */}
       {/* <Image
         src='/images/profile.jpg'
