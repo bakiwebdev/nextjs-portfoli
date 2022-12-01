@@ -20,7 +20,7 @@ const Nav = () => {
         <span className='text-2xl font-bold text-text'>BAKI.</span>
       </Link>
       {/* nav */}
-      <div className='flex flex-row justify-center items-center gap-10'>
+      <div className='hidden md:flex flex-row justify-center items-center gap-10'>
         <Link href='/'>
           <span className='text-lg font-light hover:underline text-text'>
             Home
