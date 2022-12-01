@@ -9,13 +9,13 @@ const Home: NextPage = () => {
     <div className=''>
       <Head>
         <title>
-          Welcome, I am Biruk Endris a UI/UX Designer and Front-End Developer{' '}
+          Welcome, I&apos;m Biruk Endris a UI/UX Designer and Front-End Dev
         </title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         {/* add image */}
         <meta
           name='description'
-          content='I am Biruk, a UI/UX Designer and Front-End Dev. I specialize in Next.js, Tailwind CSS, and creating user-friendly, efficient, and visually appealing web apps. I am passionate about crafting products that users love and fulfill business needs.'
+          content='I am Biruk, a UI/UX Designer and Front-End Dev. I specialize in Next.js, Tailwind CSS, and creating user-friendly, efficient, and visually appealing web apps.'
         />
         <meta
           name='keywords'
