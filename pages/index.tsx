@@ -1,31 +1,34 @@
-import type { NextPage } from "next";
-import Nav from "../components/nav";
-import Profile from "../components/profile";
-import { motion } from "framer-motion";
+import type { NextPage } from 'next'
+import Nav from '../components/nav'
+import Profile from '../components/profile'
+import { motion } from 'framer-motion'
+import Head from 'next/head'
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <div className=''>
+      <Head>
+        <title>
+          Welcome, I am Biruk Endris a UI/UX Designer and Front-End Developer{' '}
+        </title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        {/* add image */}
+        <meta
+          name='description'
+          content='I am Biruk, a UI/UX Designer and Front-End Dev. I specialize in Next.js, Tailwind CSS, and creating user-friendly, efficient, and visually appealing web apps. I am passionate about crafting products that users love and fulfill business needs.'
+        />
+        <meta
+          name='keywords'
+          content='portfolio, website, developer, artist, full stack, next.js, tailwind, react, framer motion, typescript, javascript, html, css, node js, express js, aws, telegram bot, bot'
+        />
+        <meta name='author' content='Biruk Endris' />
+      </Head>
       <Nav />
-      {/* <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: { opacity: 0, scale: 0.8 },
-          visible: { opacity: 1, scale: 1, transition: { delay: 0.5 } },
-        }}
-        className="absolute top-0 left-0 bg-green-500 w-screen h-screen flex justify-center items-center"
-      >
-        full screen
-      </motion.div> */}
-      {/* <section className="bg-gray-50 flex-1">
-
-      </section> */}
       <Profile />
       <Profile />
       <Profile />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
