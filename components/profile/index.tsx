@@ -1,4 +1,8 @@
 import Image from 'next/image'
+import IconButton from '../IconButton'
+import InstagramIcon from '../icons/InstagramIcon'
+import LinkedinIcon from '../icons/LinkedinIcon'
+import TwitterIcon from '../icons/TwitterIcon'
 
 const Profile = () => {
   return (
@@ -18,34 +22,21 @@ const Profile = () => {
       </div>
       {/* <h3 className='font-extrabold text-2xl tracking-wider'>Biruk Endris</h3> */}
       <p className='text-gray-600 text-lg md:text-2xl tracking-wider md:leading-loose'>
-        Hi, I'm Biruk, a <strong>UI/UX Designer and Front-End Dev</strong>. I
-        specialize in
+        Hi, I&apos;m Biruk, a <strong>UI/UX Designer and Front-End Dev</strong>.
+        I specialize in
         <strong> Next.js</strong>, <strong>Tailwind CSS</strong>, and{' '}
         <em>
           creating user-friendly, efficient, and visually appealing web apps
         </em>
-        . I'm passionate about crafting products that users love and fulfill
-        business needs.
+        . I&apos;m passionate about crafting products that users love and
+        fulfill business needs.
       </p>
-      {/* <h1>
-        <span className='font-semibold text-lg tracking-wider'>
-          Full Stack Developer
-        </span>
-        <span className='text-gray-600'>
-          |
-          <span className='text-gray-600'>
-            React | Node | GraphQL | MongoDB | Next.js | TailwindCSS
-          </span>
-        </span>
-      </h1> */}
-      {/* profile picture */}
-      {/* <Image
-        src='/images/profile.jpg'
-        alt='profile'
-        width={200}
-        height={200}
-        className='rounded-full object-cover '
-      /> */}
+      {/* Social Links */}
+      <div className='py-5 flex flex-row justify-start items-center gap-8 lg:gap-14 fill-gray-400'>
+        <IconButton icon={<TwitterIcon />} onClick={() => {}} />
+        <IconButton icon={<LinkedinIcon />} onClick={() => {}} />
+        <IconButton icon={<InstagramIcon />} onClick={() => {}} />
+      </div>
     </div>
   )
 }

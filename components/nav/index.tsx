@@ -1,6 +1,8 @@
 import Link from 'next/link'
 
 import { motion } from 'framer-motion'
+import IconButton from '../IconButton'
+import MenuIcon from '../icons/MenuIcon'
 const Nav = () => {
   return (
     <motion.div
@@ -41,6 +43,10 @@ const Nav = () => {
             3D Profile
           </span>
         </Link>
+      </div>
+      {/* mobile menu button */}
+      <div className='md:hidden'>
+        <IconButton icon={<MenuIcon />} onClick={() => {}} />
       </div>
     </motion.div>
   )
