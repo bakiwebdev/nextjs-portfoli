@@ -25,8 +25,6 @@ const Home: NextPage = () => {
       </Head>
       <Nav />
       <Profile />
-      <Profile />
-      <Profile />
     </div>
   )
 }
