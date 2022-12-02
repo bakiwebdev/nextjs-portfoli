@@ -38,11 +38,6 @@ const Nav = () => {
             Contact
           </span>
         </Link>
-        <Link href='/three'>
-          <span className='text-lg font-light hover:underline text-text'>
-            3D Profile
-          </span>
-        </Link>
       </div>
       {/* mobile menu button */}
       <div className='md:hidden'>

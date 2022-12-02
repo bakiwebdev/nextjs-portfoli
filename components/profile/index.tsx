@@ -1,18 +1,22 @@
 import Image from 'next/image'
 import IconButton from '../IconButton'
+import GithubIcon from '../icons/GithubIcon'
 import InstagramIcon from '../icons/InstagramIcon'
 import LinkedinIcon from '../icons/LinkedinIcon'
 import TwitterIcon from '../icons/TwitterIcon'
 
 const Profile = () => {
   const handleTwitterClick = () => {
-    window.open('https://twitter.com/EndrisBiruk')
+    window.open('https://twitter.com/bakiwebdev')
   }
   const handleLinkedInClick = () => {
     window.open('https://www.linkedin.com/in/biruk-endris/')
   }
   const handleInstagramClick = () => {
     window.open('https://www.instagram.com/endris.biruk/')
+  }
+  const handleGithubClick = () => {
+    window.open('https://github.com/Biruk-hub')
   }
 
   return (
@@ -45,6 +49,7 @@ const Profile = () => {
         <IconButton icon={<TwitterIcon />} onClick={handleTwitterClick} />
         <IconButton icon={<LinkedinIcon />} onClick={handleLinkedInClick} />
         <IconButton icon={<InstagramIcon />} onClick={handleInstagramClick} />
+        <IconButton icon={<GithubIcon />} onClick={handleGithubClick} />
       </div>
     </div>
   )
