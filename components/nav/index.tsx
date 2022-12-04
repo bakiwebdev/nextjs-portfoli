@@ -71,11 +71,17 @@ const Nav = () => {
           style={customStyles}
         >
           <div className="flex flex-col pt-20 gap-5 flex-1 h-full items-start">
-            <h1 className="w-full h-fit text-5xl text-gray-700 font-bold flex items-center justify-between">
-              Home <hr className="border-gray-700 w-20 mt-2" />
-            </h1>
-            <h1 className="text-5xl text-gray-500 font-bold">About</h1>
-            <h1 className="text-5xl text-gray-500 font-bold">Contact</h1>
+            <Link href="/">
+              <h1 className="w-full h-fit text-5xl text-gray-700 font-bold flex items-center justify-between">
+                Home <hr className="border-gray-700 w-20 mt-2" />
+              </h1>
+            </Link>
+            <Link href="/about">
+              <h1 className="text-5xl text-gray-500 font-bold">About</h1>
+            </Link>
+            <Link href="/contact">
+              <h1 className="text-5xl text-gray-500 font-bold">Contact</h1>
+            </Link>
           </div>
         </Modal>
       </div>
