@@ -63,14 +63,14 @@ const Nav = () => {
           onClick={() => setIsOpen(!isOpen)}
         />
       </div>
-      <div className="hidden">
+      <div className="hidden z-20">
         {/* mobile menu */}
         <Modal
           isOpen={isOpen}
           onRequestClose={() => setIsOpen(false)}
           style={customStyles}
         >
-          <div className="flex flex-col pt-20 gap-5 flex-1 h-full items-start">
+          <div className="flex flex-col pt-20 gap-5 flex-1 h-full items-start bg-background z-20">
             <Link href="/">
               <h1 className="w-full h-fit text-5xl text-gray-700 font-bold flex items-center justify-between">
                 Home <hr className="border-gray-700 w-20 mt-2" />
