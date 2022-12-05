@@ -2,7 +2,7 @@ import CategoryCard from "./CategoryCard";
 
 const ProjectCategorySection = () => {
   return (
-    <section className="relative w-full h-fit px-2 md:px-16 py-16 md:py-20 flex flex-col justify-between gap-4">
+    <section className="relative my-10 w-full h-fit px-2 md:px-16 py-16 md:py-20 flex flex-col justify-between gap-4">
       <h1 className="text-2xl md:text-6xl font-semibold space-y-5 tracking-wide capitalize">
         Unearth my latest creations!
       </h1>
@@ -12,14 +12,14 @@ const ProjectCategorySection = () => {
           description="Focuses on an enjoyable, efficient, and intuitive experience for users when interacting with a product."
         />
         <CategoryCard
-          style="my-20"
+          style="md:my-20"
           title={"client-side development"}
           description={
             "Bring beautiful designs to life with Frontend Development. Create a delightful user experience."
           }
         />
         <CategoryCard
-          style="my-40"
+          style="md:my-40"
           title="server-side development"
           description="Used to store and organize data, manage user authentication and business logic, and connect the frontend to the database."
         />
