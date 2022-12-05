@@ -6,7 +6,7 @@ const ProjectCategorySection = () => {
       <h1 className="text-2xl md:text-6xl font-semibold space-y-5 tracking-wide capitalize">
         Unearth my latest creations!
       </h1>
-      <section className="mx-auto w-full h-[40rem] md:h-[20rem] lg:h-[30rem] my-10 grid md:grid-cols-3 gap-5 ">
+      <section className="mx-auto w-full h-fit md:h-[20rem] lg:h-[30rem] my-10 grid md:grid-cols-3 gap-5 ">
         <CategoryCard
           title="user-experience Design"
           description="Focuses on an enjoyable, efficient, and intuitive experience for users when interacting with a product."

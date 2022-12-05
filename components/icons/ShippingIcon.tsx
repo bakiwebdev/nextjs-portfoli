@@ -6,7 +6,7 @@ const ShippingIcon = () => {
       viewBox='0 0 60 52'
       width='60px'
       xmlns='http://www.w3.org/2000/svg'
-      stroke-width='1.5'
+      strokeWidth='1.5'
       stroke='currentColor'
       className='w-6 h-6'>
       <title />
@@ -17,7 +17,7 @@ const ShippingIcon = () => {
         fill-rule='evenodd'
         id='People'
         stroke='none'
-        stroke-width='1'>
+        strokeWidth='1'>
         <g
           fill='currentColor'
           id='Icon-17'
