@@ -34,15 +34,12 @@ const Profile = () => {
           Experienced UI/UX designer <br /> and front-end developer
         </h1>
       </div>
-      <p className="text-gray-600 text-lg md:text-2xl tracking-wider md:leading-loose">
-        Hi, I&apos;m Biruk, a <strong>UI/UX Designer and Front-End Dev</strong>.
-        I specialize in
-        <strong> Next.js</strong>, <strong>Tailwind CSS</strong>, and{" "}
-        <u>
-          creating user-friendly, efficient, and visually appealing web apps
-        </u>
-        . I&apos;m passionate about crafting products that users love and
-        fulfill business needs.
+      <p className="text-gray-600 text-md leading-loose md:text-2xl tracking-wider md:leading-loose">
+        {/* Hi there! I&apos;m Biruk,{" "}
+        <strong>a creative UI/UX Designer and Front-End Dev</strong>. I&apos;m
+        passionate about building products that look <strong>good</strong>, <strong>work fast</strong>, and <strong>make people happy</strong>. I specialize in Next.js, Tailwind CSS, and making awesome
+        web apps. Let me help make your product vision a reality! */}
+        Hi there, I&apos;m Biruk, <strong>a creative UI/UX Designer and Front-End Developer!</strong> My superpowers lie in developing sites with Next.js, Tailwind CSS, and other tools to create amazing web applications that users love (❤️) and businesses appreciate. I love to combine my artistic flair with my technical know-how to make products that are both visually delightful and highly efficient.
       </p>
       {/* Social Links */}
       <div className="py-6 flex flex-row justify-start items-center gap-8 lg:gap-14 fill-gray-400">
