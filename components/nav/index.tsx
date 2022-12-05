@@ -30,7 +30,7 @@ const Nav = () => {
           transition: { delay: 0.4, ease: "easeInOut", duration: 0.4 },
         },
       }}
-      className="sticky top-0 left-0 flex flex-row w-full justify-between items-center py-4 rounded-b-md backdrop-blur-sm z-10"
+      className="sticky top-0 left-0 flex flex-row w-full justify-between items-center py-4 rounded-b-md backdrop-blur-sm z-20"
     >
       {/* name */}
       <Link href="/">
