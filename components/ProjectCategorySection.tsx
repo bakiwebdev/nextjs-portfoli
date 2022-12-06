@@ -8,10 +8,12 @@ const ProjectCategorySection = () => {
       </h1>
       <section className="mx-auto w-full h-fit md:h-[20rem] lg:h-[30rem] my-10 grid md:grid-cols-3 gap-5 ">
         <CategoryCard
+          link="/design"
           title="user-experience Design"
           description="Focuses on an enjoyable, efficient, and intuitive experience for users when interacting with a product."
         />
         <CategoryCard
+          link="/frontend"
           style="md:my-20"
           title={"client-side development"}
           description={
@@ -19,6 +21,7 @@ const ProjectCategorySection = () => {
           }
         />
         <CategoryCard
+          link="/backend"
           style="md:my-40"
           title="server-side development"
           description="Used to store and organize data, manage user authentication and business logic, and connect the frontend to the database."

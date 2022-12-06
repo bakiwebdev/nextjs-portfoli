@@ -1,13 +1,9 @@
-import type { NextPage } from "next";
-import Nav from "../components/nav";
-import Profile from "../components/profile";
 import Head from "next/head";
-import ProjectCategorySection from "../components/ProjectCategorySection";
-import CustomerChallenge from "../components/CustomerChallenge";
+import Nav from "../components/nav";
 
-const Home: NextPage = () => {
-  return (
-    <div>
+const Backend = () => {
+    return (
+        <div>
       <Head>
         <title>
           Welcome, I&apos;m Biruk Endris a UI/UX Designer and Front-End Dev
@@ -25,11 +21,8 @@ const Home: NextPage = () => {
         <meta name="author" content="Biruk Endris" />
       </Head>
       <Nav />
-      <Profile />
-      <ProjectCategorySection />
-      <CustomerChallenge />
     </div>
-  );
-};
+    );
+}
 
-export default Home;
+export default Backend;
