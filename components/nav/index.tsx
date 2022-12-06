@@ -10,6 +10,7 @@ const Nav = () => {
 
   const customStyles = {
     overlay: {
+      zIndex: 10,
       backgroundColor: "#faf9f9",
     },
     content: {

@@ -3,6 +3,7 @@ import Nav from "../components/nav";
 import Profile from "../components/profile";
 import Head from "next/head";
 import ProjectCategorySection from "../components/ProjectCategorySection";
+import CustomerChallenge from "../components/CustomerChallenge";
 
 const Home: NextPage = () => {
   return (
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
       <Nav />
       <Profile />
       <ProjectCategorySection />
+      <CustomerChallenge />
     </div>
   );
 };
