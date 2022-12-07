@@ -17,7 +17,7 @@ const CategoryCard = ({
     <Link href={link}>
       <div className="z-10 h-56 md:h-full cursor-pointer relative p-5 flex flex-row border border-gray-200 drop-shadow-sm  rounded-sm md:rounded-lg hover:shadow-lg transform duration-300 bg-background/50">
         <h3
-          className={`my-2 md:w-[70%] text-3xl md:text-xl text-gray-800 ${style}`}
+          className={`my-2 md:w-[70%] text-3xl md:text-xl lg:text-3xl text-gray-800 ${style}`}
         >
           {title}
         </h3>
