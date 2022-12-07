@@ -3,7 +3,7 @@ import WorkItem from "./WorkItem";
 
 const Works = () => {
   return (
-    <div id="#work">
+    <div>
       <div className="container mx-auto">
         <div className="flex flex-col gap-12 lg:py-28 py-20">
           <div className="grid lg:grid-cols-12 grid-cols-1 gap-8 items-center">
