@@ -14,7 +14,7 @@ const ProjectCategorySection = () => {
         />
         <CategoryCard
           link="/frontend"
-          style="md:my-20"
+          style="lg:my-20"
           title={"client-side development"}
           description={
             "Bring beautiful designs to life with Frontend Development. Create a delightful user experience."
@@ -22,7 +22,7 @@ const ProjectCategorySection = () => {
         />
         <CategoryCard
           link="/backend"
-          style="md:my-40"
+          style="lg:my-40"
           title="server-side development"
           description="Used to store and organize data, manage user authentication and business logic, and connect the frontend to the database."
         />
