@@ -21,7 +21,7 @@ const CategoryCard = ({
         >
           {title}
         </h1>
-        <p className="absolute bottom-0 left-0 p-5 font-thin text-gray-400">
+        <p className="absolute bottom-0 left-0 p-5 font-thin text-gray-600">
           {description}
         </p>
       </div>
