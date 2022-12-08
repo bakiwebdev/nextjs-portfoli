@@ -7,7 +7,7 @@ interface IconButtonProps {
 
 const IconButton = ({ icon, onClick }: IconButtonProps) => {
   return (
-    <button onClick={onClick} type='button' className=' hover:bg-gray-100 '>
+    <button aria-label='Icon' onClick={onClick} type='button' className=' hover:bg-gray-100 '>
       {icon}
     </button>
   )
