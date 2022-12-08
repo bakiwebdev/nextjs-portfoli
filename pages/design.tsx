@@ -22,7 +22,9 @@ const Design = () => {
         <meta name="author" content="Biruk Endris" />
       </Head>
       <Nav />
-      <Works />
+      <Works
+        heading={"The Experience I Create, and the Solutions I Provide."}
+      />
     </div>
   );
 };

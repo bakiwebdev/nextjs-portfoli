@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Nav from "../components/nav";
+import Works from "../components/Works";
 
 const Frontend = () => {
   return (
@@ -21,6 +22,11 @@ const Frontend = () => {
         <meta name="author" content="Biruk Endris" />
       </Head>
       <Nav />
+      <Works
+        heading={
+          "Building Beautiful UIs and Creating Smoother Customer Experiences"
+        }
+      />
     </div>
   );
 };

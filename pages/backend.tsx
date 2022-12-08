@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Nav from "../components/nav";
+import Works from "../components/Works";
 
 const Backend = () => {
-    return (
-        <div>
+  return (
+    <div>
       <Head>
         <title>
           Welcome, I&apos;m Biruk Endris a UI/UX Designer and Front-End Dev
@@ -21,8 +22,9 @@ const Backend = () => {
         <meta name="author" content="Biruk Endris" />
       </Head>
       <Nav />
+      <Works heading={"Transforming Businesses Through Server-Side Solution"} />
     </div>
-    );
-}
+  );
+};
 
 export default Backend;
