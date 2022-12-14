@@ -10,13 +10,10 @@ const Profile = () => {
     window.open("https://twitter.com/bakiwebdev");
   };
   const handleLinkedInClick = () => {
-    window.open("https://www.linkedin.com/in/biruk-endris/");
-  };
-  const handleInstagramClick = () => {
-    window.open("https://www.instagram.com/endris.biruk/");
+    window.open("https://www.linkedin.com/in/bakiwebdev/");
   };
   const handleGithubClick = () => {
-    window.open("https://github.com/Biruk-hub");
+    window.open("https://github.com/bakiwebdev");
   };
 
   return (
@@ -50,7 +47,6 @@ const Profile = () => {
       <div className="py-6 flex flex-row justify-start items-center gap-8 lg:gap-14 fill-gray-400">
         <IconButton icon={<TwitterIcon />} onClick={handleTwitterClick} />
         <IconButton icon={<LinkedinIcon />} onClick={handleLinkedInClick} />
-        <IconButton icon={<InstagramIcon />} onClick={handleInstagramClick} />
         <IconButton icon={<GithubIcon />} onClick={handleGithubClick} />
       </div>
     </div>

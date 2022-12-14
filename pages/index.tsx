@@ -4,6 +4,7 @@ import Profile from "../components/profile";
 import Head from "next/head";
 import ProjectCategorySection from "../components/ProjectCategorySection";
 import CustomerChallenge from "../components/CustomerChallenge";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
       <Profile />
       <ProjectCategorySection />
       <CustomerChallenge />
+      <Footer />
     </div>
   );
 };
