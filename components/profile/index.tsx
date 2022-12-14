@@ -42,6 +42,10 @@ const Profile = () => {
         technical know-how to make products that are both visually delightful
         and highly efficient.
       </p>
+      <button className="w-fit px-10 py-3 bg-gray-800 text-white cursor-pointer rounded-md flex justify-center items-center gap-5 active:bg-gray-700">
+        <span>Say Hello</span>
+        <span className="text-2xl">👋</span>
+      </button>
       {/* Social Links */}
       <div className="py-6 flex flex-row justify-start items-center gap-8 lg:gap-14 fill-gray-400">
         <IconButton icon={<TwitterIcon />} onClick={handleTwitterClick} />
