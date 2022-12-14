@@ -5,6 +5,7 @@ import Head from "next/head";
 import ProjectCategorySection from "../components/ProjectCategorySection";
 import CustomerChallenge from "../components/CustomerChallenge";
 import Footer from "../components/Footer";
+import Testimonials from "../components/Testimonials";
 
 const Home: NextPage = () => {
   return (
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
       <Profile />
       <ProjectCategorySection />
       <CustomerChallenge />
+      <Testimonials />
       <Footer />
     </div>
   );

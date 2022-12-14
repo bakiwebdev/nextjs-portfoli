@@ -25,7 +25,7 @@ const Contact = () => {
         <meta name="author" content="Biruk Endris" />
       </Head>
       <Nav />
-      <section className="h-screen py-10 flex md:justify-center md:items-center">
+      <section className="md:h-screen py-10 flex md:justify-center md:items-center">
         <div className="flex flex-col md:flex-row md:gap-20">
           {/* Link section */}
           <div className="flex flex-col gap-1 text-gray-400 uppercase tracking-wide text-sm">
