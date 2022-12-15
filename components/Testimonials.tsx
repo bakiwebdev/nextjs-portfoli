@@ -3,7 +3,7 @@ import Testimonial from "./Testimonial";
 
 const Testimonials = () => {
   return (
-    <section className="relative w-full h-screen px-2 md:px-16 py-16 md:py-20 flex flex-col md:flex-row justify-center md:justify-between md:items-center gap-4 md:gap-20">
+    <section className="relative w-full min-h-screen h-fit px-2 md:px-16 py-16 md:py-20 flex flex-col md:flex-row justify-center md:justify-between md:items-center gap-4 md:gap-20">
       {/* testimonials title */}
       <div className="flex flex-col gap-2 md:gap-4">
         <p className="text-blue-500 text-lg">Testimonials</p>
