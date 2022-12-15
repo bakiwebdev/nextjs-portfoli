@@ -16,14 +16,18 @@ const Home: NextPage = () => {
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         {/* add image */}
+        <meta name="title" content="baki.ruqad.com" />
         <meta
           name="description"
-          content="I am Biruk, a UI/UX Designer and Front-End Dev. I specialize in Next.js, Tailwind CSS, and creating user-friendly, efficient, and visually appealing web apps."
+          content="A UI/UX Designer and Web Developer. I specialize in Next JS, Tailwind CSS, and creating         user-friendly, efficient, and visually appealing web apps."
         />
         <meta
           name="keywords"
-          content="portfolio, website, developer, artist, full stack, next.js, tailwind, react, framer motion, typescript, javascript, html, css, node js, express js, aws, telegram bot, bot"
+          content="freelancer, web service, web design, UI/UX, portfolio, website, developer, artist, full stack, next.js,        tailwind, react, framer motion, typescript, JavaScript, HTML, CSS, Node JS, express JS, AWS, telegram bot, bot"
         />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
         <meta name="author" content="Biruk Endris" />
       </Head>
       <Nav />

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Testimonial from "./Testimonial";
 
 const Testimonials = () => {
   return (
@@ -9,46 +10,27 @@ const Testimonials = () => {
         <h1 className="text-2xl md:text-5xl font-semibold space-y-5 tracking-wide">
           Customer Reviews
         </h1>
-        <p className="text-gray-400">What our Customers are saying ...</p>
+        <p className="text-gray-400 text-lg">
+          What our Customers are saying ...
+        </p>
       </div>
       {/* testimonials area */}
       <div className="flex flex-col gap-5 max-h-[90%] h-fit w-full md:w-fit">
         {/* single testimonial */}
-        <div className="max-w-[500px] w-full p-5 rounded-md h-fit bg-white shadow-md flex flex-col md:flex-row items-start gap-5">
-          {/* Image section */}
-          <Image
-            src="/images/profile.jpg"
-            alt="profile"
-            width={100}
-            height={100}
-            className="rounded-full object-cover h-8 w-8 md:h-12 md:w-12"
-          />
-          <p className="text-gray-400 italic">
-            &quot;Over the past months, Biruk has been of amazing value to our
-            team. Starting off with very little knowledge of our tech stack, he
-            was able to pick up on everything quickly and with great
-            enthusiasm.&quot;
-          </p>
-        </div>
-        {/* single testimonial */}
-        <div className="max-w-[500px] w-full p-5 rounded-md h-fit bg-white shadow-md flex flex-col md:flex-row items-start gap-5">
-          {/* Image section */}
-          <Image
-            src="/images/profile.jpg"
-            alt="profile"
-            width={100}
-            height={100}
-            className="rounded-full object-cover h-8 w-8 md:h-12 md:w-12"
-          />
-          <p className="text-gray-400 italic">
-            &quot;I am very pleased with the web development services I received
-            from Biruk. He were able to take the ideas and turn them into a
-            beautiful, user-friendly website. They also listened to our feedback
-            throughout the process and made sure we were satisfied with the end
-            result. We would highly recommend [web developer] to anyone looking
-            for a reliable and efficient web developer.&quot;
-          </p>
-        </div>
+        <Testimonial
+          image={"/images/clients/jasper.jpg"}
+          words="Over the past months, Biruk has been of amazing value to our team.
+        Starting off with very little knowledge of our tech stack, he was able
+        to pick up on everything quickly and with great enthusiasm."
+        />
+        <Testimonial
+          image={"/images/clients/theo.jpg"}
+          words="I am very pleased with the web development services I received
+          from Biruk. He was able to take the ideas and turn them into a
+          beautiful, user-friendly website. he also listened to the feedback
+          result. I highly recommend his service to anyone looking
+          for a reliable and efficient web developer."
+        />
       </div>
     </section>
   );
