@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import AltIcon from "../components/icons/AltIcon";
 import PhoneIcon from "../components/icons/PhoneIcon";
 import Nav from "../components/nav";
+import CalenderIcon from "../components/icons/CalenderIcon";
 
 const Contact = () => {
   return (
@@ -51,32 +52,13 @@ const Contact = () => {
                 <span>biruketblem@gmail.com</span>
               </Link>
               <Link
-                href={"https://www.linkedin.com/in/bakiwebdev/"}
+                href={"https://calendly.com/bakiwebdev"}
+                target={"_blank"}
                 className="flex flex-row gap-2 md:w-fit justify-center items-center md:justify-start rounded-md border border-gray-200 px-4 py-1 text-gray-600 lowercase"
               >
-                {/* linkedin link */}
-                <svg
-                  enable-background="new 0 0 512 512"
-                  height="24px"
-                  version="1.1"
-                  viewBox="0 0 512 512"
-                  width="24x"
-                  xmlSpace="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
-                  className="w-6 h-6"
-                >
-                  <g id="Ebene_3" />
-                  <g id="Ebene_1">
-                    <g>
-                      <path d="M288,186c-31.454,0-59.004,13.824-74,34.392V192h-12v192h12V256c0-31.981,33.196-58,74-58s74,26.019,74,58v128h12V256    C374,217.402,335.42,186,288,186z" />
-                      <rect height="32" width="12" x="138" y="128" />
-                      <rect height="192" width="12" x="138" y="192" />
-                    </g>
-                  </g>
-                  <g id="Ebene_2" />
-                </svg>
-                <span>bakiwebdev</span>
+                {/* Appointment link */}
+                <CalenderIcon />
+                <span>Make an appointment</span>
               </Link>
             </div>
           </div>
