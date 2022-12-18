@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Nav from "../components/nav";
 import Works from "../components/Works";
+import Footer from "../components/Footer";
 
 const Design = () => {
   return (
@@ -25,6 +26,7 @@ const Design = () => {
       <Works
         heading={"The Experience I Create, and the Solutions I Provide."}
       />
+      <Footer />
     </div>
   );
 };

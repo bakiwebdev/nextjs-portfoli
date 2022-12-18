@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Nav from "../components/nav";
 import Works from "../components/Works";
+import Footer from "../components/Footer";
 
 const Frontend = () => {
   return (
@@ -27,6 +28,7 @@ const Frontend = () => {
           "Building Beautiful UIs and Creating Smoother Customer Experiences"
         }
       />
+      <Footer />
     </div>
   );
 };

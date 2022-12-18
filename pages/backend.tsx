@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Nav from "../components/nav";
 import Works from "../components/Works";
+import Footer from "../components/Footer";
 
 const Backend = () => {
   return (
@@ -23,6 +24,7 @@ const Backend = () => {
       </Head>
       <Nav />
       <Works heading={"Transforming Businesses Through Server-Side Solution"} />
+      <Footer />
     </div>
   );
 };

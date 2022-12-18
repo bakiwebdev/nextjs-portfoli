@@ -3,6 +3,9 @@ import Slider from "react-slick";
 import Nav from "../components/nav";
 import Image from "next/image";
 import Head from "next/head";
+import RightTopArrow from "../components/icons/RightkTopArrow";
+import Footer from "../components/Footer";
+import Link from "next/link";
 
 const SingleProduct = () => {
   const images = [
@@ -13,40 +16,31 @@ const SingleProduct = () => {
     "https://img.freepik.com/premium-psd/smartwatch-mockup-design-isolated_19223-145.jpg",
   ];
 
-  // const settings = {
-  //   customPaging: function (i: any) {
-  //     console.log("image : " + i);
-  //     return (
-  //       <Image
-  //         alt="Tee"
-  //         width={50}
-  //         height={50}
-  //         src={images[i] + "?w=300"}
-  //         className="aspect-square shadow-xl h-10 max-w-lg w-10 rounded-md object-cover"
-  //       />
-  //     );
-  //   },
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   appendDots: (dots: any) => (
-  //     <div className=" p">
-  //       <ul className=" max-w-screen overflow-x-scroll h-16 bg-rand-yellow rounded-xl p-3 gap-4 flex">
-  //         {" "}
-  //         {dots}{" "}
-  //       </ul>
-  //     </div>
-  //   ),
-  // };
-
   const settings = {
+    customPaging: function (i: any) {
+      return (
+        <Image
+          alt="Tee"
+          width={50}
+          height={50}
+          src={images[i] + "?w=300"}
+          className="aspect-square drop-shadow-md h-10 max-w-lg w-10 rounded-md object-cover"
+        />
+      );
+    },
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    appendDots: (dots: any) => (
+      <div className=" p">
+        <ul className="max-w-screen overflow-x-scroll h-16 bg-rand-yellow rounded-xl p-3 gap-8 md:gap-4 flex">
+          {" "}
+          {dots}{" "}
+        </ul>
+      </div>
+    ),
   };
 
   return (
@@ -72,46 +66,139 @@ const SingleProduct = () => {
         <meta name="author" content="Biruk Endris" />
       </Head>
       <Nav />
-      <section className="">
+      <section className="md:mt-10">
         {/* main section */}
-        <section className="flex flex-col md:flex-row md:h-[30rem] gap-5">
+        <section className="flex flex-col md:flex-row gap-10 md:gap-5">
           {/* slider */}
-          <div className="w-full md:w-4/6 h-96 md:h-[30rem] bg-gray-400"></div>
+          <div className="w-full md:w-4/6 h-fit">
+            <Slider {...settings}>
+              {images.map((image, index) => {
+                return (
+                  <img
+                    key={index}
+                    alt="Tee"
+                    src={image + "?w=826"}
+                    className="h-72 w-full rounded-xl object-cover lg:h-[540px]"
+                  />
+                );
+              })}
+            </Slider>
+          </div>
           {/* title and small description */}
           <div className="flex-1 flex flex-col h-full gap-2">
             <div className="flex flex-col gap-2">
-              <h1 className="text-2xl text-brand-blue font-bold lg:text-3xl">
-                Simple Clothes Basic Tee
+              <h1 className="text-2xl text-gray-800 font-bold lg:text-3xl">
+                Simple Clothes Basic Tee Basic Tee Simple Clothes Basic Tee
               </h1>
-              <p className="pt-4 text-sm text-brand-blue">SKU: #012345</p>
+              <p className="pt-4 text-sm text-gray-600">PRJ: #012345</p>
             </div>
             <div className="flex flex-col gap-2">
-              <h1 className="text-lg font-bold"> Description</h1>
-              <p className="text-sm">
+              <h1 className="text-lg font-bold text-gray-800"> Description</h1>
+              <p className="text-sm text-gray-600 leading-6">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
                 ad labore nostrum, a explicabo iste est dolorem deserunt id
                 ullam magni accusamus saepe, nulla sed sint reiciendis, aperiam
                 cumque officiis!
               </p>
             </div>
-            <div>
-              <p className="py-[2px] px-2 w-fit rounded-full bg-brand-yellow text-xs text-brand-blue">
-                Price
-              </p>
-              <p className="text-xl font-bold">3219.99 </p>
-            </div>
-            <form className="space-y-4 lg:pt-8">
-              <button
-                type="submit"
-                className="w-full rounded bg-brand-blue px-6 py-3 text-sm font-bold uppercase tracking-wide text-white bg-gray-700"
-              >
-                Call Now
-              </button>
-            </form>
+            <button
+              type="submit"
+              className="my-2 flex justify-center items-center gap-5 w-full rounded bg-brand-blue px-6 py-3 text-sm font-bold uppercase tracking-wide text-white bg-gray-700"
+            >
+              Demo <RightTopArrow />
+            </button>
           </div>
         </section>
-        {/* more section */}
+        {/* space */}
+        <br className="my-3" />
+        {/* Long description */}
+        <p className="text-md text-gray-600 leading-6 tracking-wider">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ad
+          labore nostrum, a explicabo iste est dolorem deserunt id ullam magni
+          accusamus saepe, nulla sed sint reiciendis, aperiam cumque officiis!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ad
+          labore nostrum, a explicabo iste est dolorem deserunt id ullam magni
+          accusamus saepe, nulla sed sint reiciendis, aperiam cumque officiis!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ad
+          labore nostrum, a explicabo iste est dolorem deserunt id ullam magni
+          accusamus saepe, nulla sed sint reiciendis, aperiam cumque officiis!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ad
+          labore nostrum, a explicabo iste est dolorem deserunt id ullam magni
+          accusamus saepe, nulla sed sint reiciendis, aperiam cumque officiis!
+        </p>
+        {/* space */}
+        <br className="my-3" />
+        {/* Feature */}
+        <div className="flex flex-col gap-2">
+          <h1 className="text-lg text-gray-800">Feature</h1>
+          <ul className="mx-5 list-disc text-gray-600">
+            <li>Home page</li>
+            <li>About page</li>
+            <li>Contact page</li>
+            <li>Blog page</li>
+          </ul>
+        </div>
+        {/* space */}
+        <br className="my-3" />
+        {/* Technology used */}
+        <div className="flex flex-col gap-2">
+          <h1 className="text-lg text-gray-800">Technology used</h1>
+          <div className="flex gap-2 flex-wrap">
+            <div className="h-10 w-10 rounded-md drop-shadow-sm">
+              <Image
+                alt="logo"
+                src={"/images/logo/figmalogo.png"}
+                width={40}
+                height={40}
+              />
+            </div>
+            <div className="h-10 w-10 rounded-md drop-shadow-sm">
+              <Image
+                alt="logo"
+                src={"/images/logo/figmalogo.png"}
+                width={40}
+                height={40}
+              />
+            </div>
+            <div className="h-10 w-10 rounded-md drop-shadow-sm">
+              <Image
+                alt="logo"
+                src={"/images/logo/figmalogo.png"}
+                width={40}
+                height={40}
+              />
+            </div>
+            <div className="h-10 w-10 rounded-md drop-shadow-sm">
+              <Image
+                alt="logo"
+                src={"/images/logo/figmalogo.png"}
+                width={40}
+                height={40}
+              />
+            </div>
+            <div className="h-10 w-10 rounded-md drop-shadow-sm">
+              <Image
+                alt="logo"
+                src={"/images/logo/figmalogo.png"}
+                width={40}
+                height={40}
+              />
+            </div>
+          </div>
+        </div>
+        {/* space */}
+        <br className="my-3" />
+        {/* Source */}
+        <div className="flex flex-col gap-2">
+          <h1 className="text-lg text-gray-800">Source Code</h1>
+          <Link href={"/"} target={"_blank"} className="flex gap-2 my-1">
+            <span className="text-blue-600">open in github</span>
+            <RightTopArrow />
+          </Link>
+        </div>
       </section>
+      {/* footer */}
+      <Footer />
     </div>
   );
 };
