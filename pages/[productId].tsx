@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 import projects from "../data/projects";
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
+import TechnologyLogo from "../components/TechnologyLogo";
 
 interface SingleProductProps {
   id: string;
@@ -140,16 +141,8 @@ const SingleProduct = ({ product }: { product: SingleProductProps }) => {
         <div className="flex flex-col gap-2">
           <h1 className="text-lg text-gray-800">Technology used</h1>
           <div className="flex gap-2 flex-wrap">
-            {/* <div className="h-10 w-10 rounded-md drop-shadow-sm">
-              <Image
-                alt="logo"
-                src={"/images/logo/figmalogo.png"}
-                width={40}
-                height={40}
-              />
-            </div> */}
             {product.technologies.map((technology, index) => {
-              return <span key={index}>{technology}</span>;
+              return <TechnologyLogo key={index} name={technology} />;
             })}
           </div>
         </div>
@@ -181,24 +174,21 @@ export default SingleProduct;
 export const getServerSideProps: GetServerSideProps = async (
   context: GetServerSidePropsContext
 ) => {
-  const productId = context.params;
+  const { productId }: any = context.params;
   console.log(productId);
 
-  // const res = await fetch(`https://.../data`);
-  // const data = await res.json();
+  const data = projects.filter((project) => {
+    return project.id == productId;
+  });
 
-  // if (!data) {
-  //   return {
-  //     redirect: {
-  //       destination: "/",
-  //       permanent: false,
-  //     },
-  //   };
-  // }
-
+  if (data.length == 0) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
-      product: projects[0],
+      product: data[0],
     }, // will be passed to the page component as props
   };
 };
