@@ -22,7 +22,6 @@ interface SingleProductProps {
 }
 
 const SingleProduct = ({ product }: { product: SingleProductProps }) => {
-  console.log(product);
   const settings = {
     customPaging: function (i: any) {
       return (
@@ -107,13 +106,15 @@ const SingleProduct = ({ product }: { product: SingleProductProps }) => {
                 {product.smallDescription}
               </p>
             </div>
-            <Link
-              href={product.demoUrl || ""}
-              target={"_blank"}
-              className="my-2 flex justify-center items-center gap-5 w-full rounded bg-brand-blue px-6 py-3 text-sm font-bold uppercase tracking-wide text-white bg-gray-700"
-            >
-              Demo <RightTopArrow />
-            </Link>
+            {product.demoUrl && (
+              <Link
+                href={product.demoUrl}
+                target={"_blank"}
+                className="my-2 flex justify-center items-center gap-5 w-full rounded bg-brand-blue px-6 py-3 text-sm font-bold uppercase tracking-wide text-white bg-gray-700"
+              >
+                Demo <RightTopArrow />
+              </Link>
+            )}
           </div>
         </section>
         {/* space */}
@@ -155,13 +156,19 @@ const SingleProduct = ({ product }: { product: SingleProductProps }) => {
         {/* space */}
         <br className="my-3" />
         {/* Source */}
-        <div className="flex flex-col gap-2">
-          <h1 className="text-lg text-gray-800">Source Code</h1>
-          <Link href={"/"} target={"_blank"} className="flex gap-2 my-1">
-            <span className="text-blue-600">open in github</span>
-            <RightTopArrow />
-          </Link>
-        </div>
+        {product.sourceLink && (
+          <div className="flex flex-col gap-2">
+            <h1 className="text-lg text-gray-800">Source Code</h1>
+            <Link
+              href={product.sourceLink}
+              target={"_blank"}
+              className="flex gap-2 my-1"
+            >
+              <span className="text-blue-600">open in github</span>
+              <RightTopArrow />
+            </Link>
+          </div>
+        )}
       </section>
       {/* footer */}
       <Footer />
