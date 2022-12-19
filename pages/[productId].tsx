@@ -6,16 +6,23 @@ import Head from "next/head";
 import RightTopArrow from "../components/icons/RightkTopArrow";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import projects from "../data/projects";
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
-const SingleProduct = () => {
-  const images = [
-    "https://img.freepik.com/premium-psd/smartwatch-mockup_439185-553.jpg",
-    "https://img.freepik.com/free-psd/smartwatch-mockup_125540-1277.jpg",
-    "https://img.freepik.com/premium-psd/smart-watch-series-6-mockup-left-view_1332-25543.jpg",
-    "https://img.freepik.com/premium-psd/mockup_1332-19069.jpg",
-    "https://img.freepik.com/premium-psd/smartwatch-mockup-design-isolated_19223-145.jpg",
-  ];
+interface SingleProductProps {
+  id: string;
+  images: string[];
+  title: string;
+  smallDescription: string;
+  longDescription: string;
+  demoUrl?: string;
+  features: string[];
+  technologies: string[];
+  sourceLink?: string;
+}
 
+const SingleProduct = ({ product }: { product: SingleProductProps }) => {
+  console.log(product);
   const settings = {
     customPaging: function (i: any) {
       return (
@@ -23,8 +30,8 @@ const SingleProduct = () => {
           alt="Tee"
           width={50}
           height={50}
-          src={images[i] + "?w=300"}
-          className="aspect-square drop-shadow-md h-10 max-w-lg w-10 rounded-md object-cover"
+          src={product.images[i]}
+          className="aspect-square drop-shadow-md h-10 max-w-lg w-10 rounded-md object-cover border border-blue-600"
         />
       );
     },
@@ -72,12 +79,14 @@ const SingleProduct = () => {
           {/* slider */}
           <div className="w-full md:w-4/6 h-fit">
             <Slider {...settings}>
-              {images.map((image, index) => {
+              {product.images.map((image, index) => {
                 return (
-                  <img
+                  <Image
                     key={index}
-                    alt="Tee"
-                    src={image + "?w=826"}
+                    alt={product.title}
+                    width={1000}
+                    height={1000}
+                    src={image}
                     className="h-72 w-full rounded-xl object-cover lg:h-[540px]"
                   />
                 );
@@ -88,43 +97,30 @@ const SingleProduct = () => {
           <div className="flex-1 flex flex-col h-full gap-2">
             <div className="flex flex-col gap-2">
               <h1 className="text-2xl text-gray-800 font-bold lg:text-3xl">
-                Simple Clothes Basic Tee Basic Tee Simple Clothes Basic Tee
+                {product.title}
               </h1>
-              <p className="pt-4 text-sm text-gray-600">PRJ: #012345</p>
+              <p className="pt-4 text-sm text-gray-600">PRJ: #{product.id}</p>
             </div>
             <div className="flex flex-col gap-2">
               <h1 className="text-lg font-bold text-gray-800"> Description</h1>
               <p className="text-sm text-gray-600 leading-6">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
-                ad labore nostrum, a explicabo iste est dolorem deserunt id
-                ullam magni accusamus saepe, nulla sed sint reiciendis, aperiam
-                cumque officiis!
+                {product.smallDescription}
               </p>
             </div>
-            <button
-              type="submit"
+            <Link
+              href={product.demoUrl || ""}
+              target={"_blank"}
               className="my-2 flex justify-center items-center gap-5 w-full rounded bg-brand-blue px-6 py-3 text-sm font-bold uppercase tracking-wide text-white bg-gray-700"
             >
               Demo <RightTopArrow />
-            </button>
+            </Link>
           </div>
         </section>
         {/* space */}
         <br className="my-3" />
         {/* Long description */}
         <p className="text-md text-gray-600 leading-6 tracking-wider">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ad
-          labore nostrum, a explicabo iste est dolorem deserunt id ullam magni
-          accusamus saepe, nulla sed sint reiciendis, aperiam cumque officiis!
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ad
-          labore nostrum, a explicabo iste est dolorem deserunt id ullam magni
-          accusamus saepe, nulla sed sint reiciendis, aperiam cumque officiis!
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ad
-          labore nostrum, a explicabo iste est dolorem deserunt id ullam magni
-          accusamus saepe, nulla sed sint reiciendis, aperiam cumque officiis!
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ad
-          labore nostrum, a explicabo iste est dolorem deserunt id ullam magni
-          accusamus saepe, nulla sed sint reiciendis, aperiam cumque officiis!
+          {product.longDescription}
         </p>
         {/* space */}
         <br className="my-3" />
@@ -132,10 +128,9 @@ const SingleProduct = () => {
         <div className="flex flex-col gap-2">
           <h1 className="text-lg text-gray-800">Feature</h1>
           <ul className="mx-5 list-disc text-gray-600">
-            <li>Home page</li>
-            <li>About page</li>
-            <li>Contact page</li>
-            <li>Blog page</li>
+            {product.features.map((feature, index) => {
+              return <li key={index}>{feature}</li>;
+            })}
           </ul>
         </div>
         {/* space */}
@@ -144,46 +139,17 @@ const SingleProduct = () => {
         <div className="flex flex-col gap-2">
           <h1 className="text-lg text-gray-800">Technology used</h1>
           <div className="flex gap-2 flex-wrap">
-            <div className="h-10 w-10 rounded-md drop-shadow-sm">
+            {/* <div className="h-10 w-10 rounded-md drop-shadow-sm">
               <Image
                 alt="logo"
                 src={"/images/logo/figmalogo.png"}
                 width={40}
                 height={40}
               />
-            </div>
-            <div className="h-10 w-10 rounded-md drop-shadow-sm">
-              <Image
-                alt="logo"
-                src={"/images/logo/figmalogo.png"}
-                width={40}
-                height={40}
-              />
-            </div>
-            <div className="h-10 w-10 rounded-md drop-shadow-sm">
-              <Image
-                alt="logo"
-                src={"/images/logo/figmalogo.png"}
-                width={40}
-                height={40}
-              />
-            </div>
-            <div className="h-10 w-10 rounded-md drop-shadow-sm">
-              <Image
-                alt="logo"
-                src={"/images/logo/figmalogo.png"}
-                width={40}
-                height={40}
-              />
-            </div>
-            <div className="h-10 w-10 rounded-md drop-shadow-sm">
-              <Image
-                alt="logo"
-                src={"/images/logo/figmalogo.png"}
-                width={40}
-                height={40}
-              />
-            </div>
+            </div> */}
+            {product.technologies.map((technology, index) => {
+              return <span key={index}>{technology}</span>;
+            })}
           </div>
         </div>
         {/* space */}
@@ -204,3 +170,28 @@ const SingleProduct = () => {
 };
 
 export default SingleProduct;
+
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  const productId = context.params;
+  console.log(productId);
+
+  // const res = await fetch(`https://.../data`);
+  // const data = await res.json();
+
+  // if (!data) {
+  //   return {
+  //     redirect: {
+  //       destination: "/",
+  //       permanent: false,
+  //     },
+  //   };
+  // }
+
+  return {
+    props: {
+      product: projects[0],
+    }, // will be passed to the page component as props
+  };
+};
