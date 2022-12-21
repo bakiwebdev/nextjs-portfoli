@@ -16,16 +16,19 @@ const Works = ({ heading, projects }: WorksProps) => {
               {heading}
             </h2>
           </div>
-          <div className="flex md:flex-row flex-col flex-wrap">
-            {projects.map((project) => (
-              <WorkItem
-                key={project.id}
-                image={project.image}
-                title={project.title}
-                description={project.description}
-              />
-            ))}
-          </div>
+          {projects && (
+            <div className="flex md:flex-row flex-col flex-wrap">
+              {projects.map((project) => (
+                <WorkItem
+                  key={project.id}
+                  id={project.id}
+                  image={project.image}
+                  title={project.title}
+                  description={project.description}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

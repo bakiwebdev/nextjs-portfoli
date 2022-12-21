@@ -1,9 +1,3 @@
-const backend = [
-  {
-    image: "hello",
-    title: "hello",
-    description: "description",
-  },
-];
+const backend: project[] = [];
 
 export default backend;

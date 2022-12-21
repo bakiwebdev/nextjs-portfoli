@@ -1,14 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface WorkItemProps {
+  id: string | null;
   title: string;
   description: string;
   image: any;
 }
 
-const WorkItem = ({ title, description, image }: WorkItemProps) => {
+const WorkItem = ({ id, title, description, image }: WorkItemProps) => {
   return (
-    <div className="mx-auto md:mx-0 flex w-fit group basis-1/2 flex-col lg:odd:pl-10 lg:odd:pr-14 lg:even:pr-10 lg:even:pl-14 md:odd:pr-4 md:even:pl-4 px-0 md:even:mt-20 md:odd:pb-20 md:even:pb-0 pb-12 cursor-pointer">
+    <Link
+      href={id ? `/${id}` : "#"}
+      className="mx-auto md:mx-0 flex w-fit group basis-1/2 flex-col lg:odd:pl-10 lg:odd:pr-14 lg:even:pr-10 lg:even:pl-14 md:odd:pr-4 md:even:pl-4 px-0 md:even:mt-20 md:odd:pb-20 md:even:pb-0 pb-12 cursor-pointer"
+    >
       <div>
         <Image
           src={image}
@@ -26,7 +31,7 @@ const WorkItem = ({ title, description, image }: WorkItemProps) => {
           {description}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 

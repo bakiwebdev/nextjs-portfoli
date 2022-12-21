@@ -2,8 +2,10 @@ import Head from "next/head";
 import Nav from "../components/nav";
 import Works from "../components/Works";
 import Footer from "../components/Footer";
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
+import backendData from "../data/backend";
 
-const Backend = () => {
+const Backend = ({ backend }: { backend: project[] }) => {
   return (
     <div>
       <Head>
@@ -23,10 +25,23 @@ const Backend = () => {
         <meta name="author" content="Biruk Endris" />
       </Head>
       <Nav />
-      <Works heading={"Transforming Businesses Through Server-Side Solution"} />
+      <Works
+        heading={"Transforming Businesses Through Server-Side Solution"}
+        projects={backend}
+      />
       <Footer />
     </div>
   );
 };
 
 export default Backend;
+
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  return {
+    props: {
+      backends: backendData,
+    },
+  };
+};
