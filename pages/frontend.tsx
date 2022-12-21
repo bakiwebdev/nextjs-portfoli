@@ -2,8 +2,10 @@ import Head from "next/head";
 import Nav from "../components/nav";
 import Works from "../components/Works";
 import Footer from "../components/Footer";
+import frontendData from "../data/frontend";
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
-const Frontend = () => {
+const Frontend = ({ frontend }: { frontend: project[] }) => {
   return (
     <div>
       <Head>
@@ -27,6 +29,7 @@ const Frontend = () => {
         heading={
           "Building Beautiful UIs and Creating Smoother Customer Experiences"
         }
+        projects={frontend}
       />
       <Footer />
     </div>
@@ -34,3 +37,13 @@ const Frontend = () => {
 };
 
 export default Frontend;
+
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  return {
+    props: {
+      frontend: frontendData,
+    },
+  };
+};

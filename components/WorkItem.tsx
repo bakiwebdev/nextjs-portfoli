@@ -15,7 +15,7 @@ const WorkItem = ({ title, description, image }: WorkItemProps) => {
           alt={title}
           width={400}
           height={400}
-          className="rounded-lg group-hover:shadow-lg transform duration-300"
+          className="rounded-lg group-hover:shadow-lg transform duration-300 bg-white"
         />
       </div>
       <div className="flex w-full flex-col self-stretch pt-6">

@@ -3,9 +3,10 @@ import WorkItem from "./WorkItem";
 
 interface WorksProps {
   heading: string;
+  projects: project[];
 }
 
-const Works = ({ heading }: WorksProps) => {
+const Works = ({ heading, projects }: WorksProps) => {
   return (
     <div>
       <div className="container mx-auto">
@@ -16,14 +17,12 @@ const Works = ({ heading }: WorksProps) => {
             </h2>
           </div>
           <div className="flex md:flex-row flex-col flex-wrap">
-            {[1, 2, 3, 4].map((item, index) => (
+            {projects.map((project) => (
               <WorkItem
-                key={index}
-                image={"/images/ice-cream.png"}
-                title={"Ice Cream App Concept"}
-                description={
-                  "Nibh tellus ut suspendisse porttitor. Vivamus sit tincidunt bibendum a etiam fringilla quis nisl. Amet eget et, lacus, ullamcorper lectus ullamcorper amet."
-                }
+                key={project.id}
+                image={project.image}
+                title={project.title}
+                description={project.description}
               />
             ))}
           </div>

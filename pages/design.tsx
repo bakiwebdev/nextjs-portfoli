@@ -2,8 +2,10 @@ import Head from "next/head";
 import Nav from "../components/nav";
 import Works from "../components/Works";
 import Footer from "../components/Footer";
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
+import designData from "../data/design";
 
-const Design = () => {
+const Design = ({ designs }: { designs: project[] }) => {
   return (
     <div>
       <Head>
@@ -25,6 +27,7 @@ const Design = () => {
       <Nav />
       <Works
         heading={"The Experience I Create, and the Solutions I Provide."}
+        projects={designs}
       />
       <Footer />
     </div>
@@ -32,3 +35,13 @@ const Design = () => {
 };
 
 export default Design;
+
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  return {
+    props: {
+      designs: designData,
+    },
+  };
+};
