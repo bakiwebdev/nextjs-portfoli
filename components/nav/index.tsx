@@ -1,12 +1,14 @@
 import Link from "next/link";
-import { motion } from "framer-motion";
 import IconButton from "../IconButton";
 import MenuIcon from "../icons/MenuIcon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+// import { gsap } from "gsap";
 import Modal from "react-modal";
 import CloseIcon from "../icons/CloseIcon";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // let tl = gsap.timeline();
 
   const customStyles = {
     overlay: {
@@ -19,38 +21,31 @@ const Nav = () => {
     },
   };
 
+  // useEffect(() => {
+  //   tl.to(".brand-name", { duration: 1, scale: 2, ease: "back" })
+  //   tl.from(".nav", {duration: 1, opacity: '100%', x: 20})
+  // }, [tl]);
+
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={{
-        hidden: { opacity: 0, y: -20 },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: { delay: 0.4, ease: "easeInOut", duration: 0.4 },
-        },
-      }}
-      className="sticky top-0 left-0 flex flex-row w-full justify-between items-center py-4 rounded-b-md backdrop-blur-sm z-20"
-    >
+    <div className="sticky top-0 left-0 flex flex-row w-full justify-between items-center py-4 rounded-b-md backdrop-blur-sm z-20">
       {/* name */}
-      <Link href="/">
+      <Link className={"brand-name"} href="/">
         <span className="text-2xl font-bold text-text">BAKI.</span>
       </Link>
       {/* nav */}
       {!isOpen && (
         <div className="hidden md:flex flex-row justify-center items-center gap-10">
-          <Link href="/">
+          <Link className={"nav"} href="/">
             <span className="text-lg font-light hover:underline text-text">
               Home
             </span>
           </Link>
-          <Link href="/about">
+          <Link className={"nav"} href="/about">
             <span className="text-lg font-light hover:underline text-text">
               About
             </span>
           </Link>
-          <Link href="/contact">
+          <Link className={"nav"} href="/contact">
             <span className="text-lg font-light hover:underline text-text">
               Contact
             </span>
@@ -86,7 +81,7 @@ const Nav = () => {
           </div>
         </Modal>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

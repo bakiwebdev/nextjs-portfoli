@@ -4,6 +4,8 @@ import GithubIcon from "../icons/GithubIcon";
 import InstagramIcon from "../icons/InstagramIcon";
 import LinkedinIcon from "../icons/LinkedinIcon";
 import TwitterIcon from "../icons/TwitterIcon";
+import { gsap } from "gsap";
+import { useEffect, useRef } from "react";
 
 const Profile = () => {
   const handleTwitterClick = () => {
@@ -15,6 +17,10 @@ const Profile = () => {
   const handleGithubClick = () => {
     window.open("https://github.com/bakiwebdev");
   };
+
+  // useEffect(() => {
+  //   gsap.to(".headerText", { duration: 2, backgroundColor: "#003284" });
+  // }, []);
 
   return (
     <div className="relative w-full h-fit px-2 md:px-16 py-16 md:py-20 flex flex-col justify-between gap-4">
