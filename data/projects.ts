@@ -77,6 +77,33 @@ const projects = [
     technologies: ["react js", "tailwind css", "node js", "express js"],
     sourceLink: null,
   },
+  {
+    id: "fr004",
+    images: [
+      "https://res.cloudinary.com/dzkwsxn5b/image/upload/v1679010528/Portfolio/Project/Frontend/Panda%20Steeze/Screenshot_2023-03-17_at_00-44-11_Panda_Steeze_brmkem.png",
+      "https://res.cloudinary.com/dzkwsxn5b/image/upload/v1679010528/Portfolio/Project/Frontend/Panda%20Steeze/Screenshot_2023-03-17_at_00-47-38_Panda_Steeze_pp3uhx.png",
+      "https://res.cloudinary.com/dzkwsxn5b/image/upload/v1679010528/Portfolio/Project/Frontend/Panda%20Steeze/Screenshot_2023-03-17_at_00-47-54_https___panda-steeze.vercel.app_fhqce6.png",
+      "https://res.cloudinary.com/dzkwsxn5b/image/upload/v1679010528/Portfolio/Project/Frontend/Panda%20Steeze/Screenshot_2023-03-17_at_00-48-12_https___panda-steeze.vercel.app_ca3zp8.png",
+      "https://res.cloudinary.com/dzkwsxn5b/image/upload/v1679010628/Portfolio/Project/Frontend/Panda%20Steeze/Screenshot_2023-03-17_at_00-50-08_Panda_Steeze_liumlr.png",
+    ],
+    title: "Panda Steeze",
+    smallDescription:
+      "Panda Steeze is an online store that specializes in selling t-shirts and hoodies. The website has a minimalist and modern design, with a white and black color scheme that highlights the products.",
+    longDescription:
+      "The homepage features a large banner with a high-quality image of a model wearing one of the t-shirts, along with a catchy tagline that emphasizes the brand's style and attitude. The website is easy to navigate, with clear categories for the different product types, including t-shirts, hoodies, and accessories.",
+    demoUrl: "https://panda-steeze.vercel.app/",
+    features: [
+      "Responsive design",
+      "Dynamic grid layout",
+      "Trending item recommendations",
+      "Add to basket functionality",
+      "Size and color selection",
+      "Wishlist functionality",
+      "Checkout process",
+    ],
+    technologies: ["next js", "tailwind css", "node js", "express js"],
+    sourceLink: null,
+  },
 ];
 
 export default projects;

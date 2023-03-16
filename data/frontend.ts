@@ -23,6 +23,14 @@ const frontend = [
     description:
       "BikeNGo is an app that helps people in the Netherlands buy and sell bicycles. It provides an interactive map that helps buyers locate the nearest bike that meets their needs. The app also allows sellers to list their bikes, making it a convenient way to buy and sell bikes in the Netherlands.",
   },
+  {
+    id: "fr004",
+    image:
+      "https://res.cloudinary.com/dzkwsxn5b/image/upload/v1679010528/Portfolio/Project/Frontend/Panda%20Steeze/Screenshot_2023-03-17_at_00-44-11_Panda_Steeze_brmkem.png",
+    title: "Panda Steeze",
+    description:
+      "Panda Steeze is an online store that specializes in selling t-shirts and hoodies. The website has a minimalist and modern design, with a white and black color scheme that highlights the products. The homepage features a large banner with a high-quality image of a model wearing one of the t-shirts, along with a catchy tagline that emphasizes the brand's style and attitude. The website is easy to navigate, with clear categories for the different product types, including t-shirts, hoodies, and accessories.",
+  },
 ];
 
 export default frontend;
