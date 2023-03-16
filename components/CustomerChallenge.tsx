@@ -11,44 +11,44 @@ const CustomerChallenge = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-6 md:grid-rows-3 lg:grid-rows-2 gap-10">
         <ChallengeCard
           index={1}
-          header={"Lack of an online presence"}
+          header={"Poor Website Design"}
           description={
-            "A lack of visibility on the web could lead to a business website's failure due to an inability to attract web traffic and potential customers."
+            "If a business's website is outdated, slow, or difficult to use, potential customers may not be able to find or purchase products or services easily. As a website developer, I can help by redesigning the website to make it more user-friendly and mobile-responsive, optimizing it for search engines."
           }
         />
         <ChallengeCard
           index={2}
-          header={"Lack of an online presence"}
+          header={"Outdated technology"}
           description={
-            "A lack of visibility on the web could lead to a business website's failure due to an inability to attract web traffic and potential customers."
+            "If a business is still using outdated technology for operations, it may be causing delays, errors, or frustration for customers and staff. As a website developer, I can help by integrating new software or apps to streamline operations and improve the customer experience."
           }
         />
         <ChallengeCard
           index={3}
-          header={"Lack of an online presence"}
+          header={"Outdated or irrelevant content"}
           description={
-            "A lack of visibility on the web could lead to a business website's failure due to an inability to attract web traffic and potential customers."
+            "If a business's website has not been updated in a while, or if the content is no longer relevant to the target audience, it may not be engaging potential customers. As a website developer, I can help by refreshing the content to make it more engaging and up-to-date, or by adding new content such as blog posts or articles."
           }
         />
         <ChallengeCard
           index={4}
-          header={"Lack of an online presence"}
+          header={"Lack of social media integration"}
           description={
-            "A lack of visibility on the web could lead to a business website's failure due to an inability to attract web traffic and potential customers."
+            "If a business is not active on social media or if its social media accounts are not integrated with its website, it may be missing out on potential customers. As a website developer, I can help by integrating social media buttons or feeds on the website, making it easy for customers to connect with the business on social media."
           }
         />
         <ChallengeCard
           index={5}
-          header={"Lack of an online presence"}
+          header={"Slow website performance"}
           description={
-            "A lack of visibility on the web could lead to a business website's failure due to an inability to attract web traffic and potential customers."
+            "If a business's website takes too long to load, potential customers may become impatient and leave the site. As a website developer, I can help by optimizing the website's speed and performance, such as compressing images or using a content delivery network."
           }
         />
         <ChallengeCard
           index={6}
-          header={"Lack of an online presence"}
+          header={"Lack of mobile responsiveness"}
           description={
-            "A lack of visibility on the web could lead to a business website's failure due to an inability to attract web traffic and potential customers."
+            "If a business's website is not optimized for mobile devices, potential customers may have difficulty accessing the site on their smartphones or tablets. As a website developer, I can help by creating a mobile-responsive website that is easy to use and navigate on any device."
           }
         />
       </div>
