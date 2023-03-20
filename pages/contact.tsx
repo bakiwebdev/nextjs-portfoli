@@ -45,11 +45,11 @@ const Contact = () => {
                 <span>+31 6 1050 32 30</span>
               </Link>
               <Link
-                href={"mailto:biruketblem@gmail.com"}
+                href={"mailto:developer@bakiwebdev.com"}
                 className="flex flex-row gap-2 md:w-fit justify-center items-center md:justify-star rounded-md border border-gray-200 px-4 py-1 text-gray-600 lowercase"
               >
                 <AltIcon />
-                <span>biruketblem@gmail.com</span>
+                <span>developer@bakiwebdev.com</span>
               </Link>
               <Link
                 href={"https://calendly.com/bakiwebdev"}

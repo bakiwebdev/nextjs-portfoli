@@ -33,7 +33,7 @@ const Footer = () => {
           <span className="ml-3 text-xl">Baki Web Dev</span>
         </Link>
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-          2022 Bakiwebdev
+          2023 Bakiwebdev
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start fill-gray-400 gap-5">
           <IconButton icon={<TwitterIcon />} onClick={handleTwitterClick} />
