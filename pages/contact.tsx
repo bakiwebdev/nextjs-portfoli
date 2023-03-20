@@ -42,7 +42,7 @@ const Contact = () => {
                 className="flex flex-row gap-2 md:w-fit justify-center items-center md:justify-start rounded-md border border-gray-200 px-4 py-1 text-gray-600"
               >
                 <PhoneIcon />
-                <span>+31 6 1050 32 30</span>
+                <span>+31 6 1050 3230</span>
               </Link>
               <Link
                 href={"mailto:developer@bakiwebdev.com"}
